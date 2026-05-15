@@ -4,4 +4,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-  return "Hello World"
+  return f"""
+  Hello World <br>
+  Server: {socket.gethostname()}<br>
+  PID: {os.getpid()}
+  """
